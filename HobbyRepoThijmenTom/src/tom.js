@@ -41,8 +41,6 @@ export class tom extends LitElement{
                             border-color: transparent red transparent red;
                         }
                         
-                        
-                        
                     }
                     
                 </style>
@@ -53,7 +51,7 @@ export class tom extends LitElement{
             
             <div id="mainDiv" class="firstStage">
                 <h1>Hobby Project Tom</h1>
-                <button @click="${this.clickEvent}">Click me</button>
+                <button id="buttonID" @click="${this.clickEvent}">Click me</button>
             </div>    
             
             `
@@ -63,6 +61,7 @@ export class tom extends LitElement{
         const div = this.shadowRoot.querySelector("#mainDiv")
         if(div.className === "firstStage"){
             div.className = "secondStage";
+            this.shadowRoot.getElementById("buttonID").remove();
 
         }else{
             div.className = "firstStage";
@@ -76,6 +75,8 @@ export class tom extends LitElement{
 
     static get styles(){
         return css`
+        
+    
       
         
         .firstStage{
@@ -85,6 +86,7 @@ export class tom extends LitElement{
             border-radius: 5px;
             border-style: solid;
             transition: 3s;
+            color: white;
         }
         
         .secondStage{
@@ -93,8 +95,12 @@ export class tom extends LitElement{
             border-radius: 5px;
             border-style: solid;
             transition: 3s;
+            color: red;
+            padding-right: 100px;
+            margin-right: 10px;
         
         }
+        
         
         `
     }
