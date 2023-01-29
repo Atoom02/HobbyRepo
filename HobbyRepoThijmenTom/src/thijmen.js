@@ -42,8 +42,12 @@ export class thijmen extends LitElement{
 
     static get styles(){
         return css`
+
             div {
-                color: lime;
+                color: var(--main-color);
+            }
+            li {
+                font-weight: bold;
             }
         `
     }
