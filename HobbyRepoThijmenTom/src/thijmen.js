@@ -35,8 +35,11 @@ export class thijmen extends LitElement{
     }
 
     _addTodo(){
+        if(this.shadowRoot.querySelector('input').value === ''){
+
+        }else{
         this.todos = [...this.todos, this.todo]
-        this.shadowRoot.querySelector('input').value = '';
+        this.shadowRoot.querySelector('input').value = '';}
     }
 
 
