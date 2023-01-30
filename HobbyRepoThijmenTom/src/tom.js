@@ -77,24 +77,24 @@ export class tom extends LitElement{
         return css`
         
     
+        div{
+             border-width: 2px;
+            border-radius: 5px;
+            border-style: solid;
+            transition: 3s;
+        }
       
         
         .firstStage{
             justify-content: center;
             border-color: rebeccapurple;
-            border-width: 2px;
-            border-radius: 5px;
-            border-style: solid;
-            transition: 3s;
+           
             color: white;
         }
         
         .secondStage{
             border-color: red;
-            border-width: 2px;
-            border-radius: 5px;
-            border-style: solid;
-            transition: 3s;
+           
             color: red;
             padding-right: 100px;
             margin-right: 10px;
